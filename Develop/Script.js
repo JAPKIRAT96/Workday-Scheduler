@@ -103,24 +103,24 @@ $(document).ready(function () {
       .get();
 
     if (day < 0) {
-      $(".input-area").css("background-color", "grey");
+      $(".input-area").css("background-color", "#b5b5b5"); //grey
     } else if (day > 0) {
-      $(".input-area").css("background-color", "lightblue");
+      $(".input-area").css("background-color", "#61ff59"); // green color
     } else {
       for (var i = 0; i < timeIDs.length; i++) {
         var timeIDsInt = parseInt(timeIDs[i]);
         if (timeIDsInt < currentHourInt) {
           $("#" + timeIDs[i])
             .find("textarea")
-            .css("background-color", "grey");
+            .css("background-color", "#b5b5b5"); //grey
         } else if (timeIDsInt === currentHourInt) {
           $("#" + timeIDs[i])
             .find("textarea")
-            .css("background-color", "#ccffff");
+            .css("background-color", "red"); //red
         } else {
           $("#" + timeIDs[i])
             .find("textarea")
-            .css("background-color", "lightblue");
+            .css("background-color", "#61ff59"); // green color
         }
       }
     }
